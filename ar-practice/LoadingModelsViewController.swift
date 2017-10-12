@@ -42,44 +42,44 @@ class LoadingModelsViewController: UIViewController,ARSCNViewDelegate {
     
     private func registerGestureRecognizers() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
-        tapGestureRecognizer.numberOfTapsRequired = 1
+//        tapGestureRecognizer.numberOfTapsRequired = 1
         
         //we will use the double tap gesture to apply force to physics
-        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
-        doubleTapGestureRecognizer.numberOfTapsRequired = 2
+//        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+//        doubleTapGestureRecognizer.numberOfTapsRequired = 2
         
         //we need to add a dependency, single tap recognizer will not wait for the double tap to happen so if there is double tap so single tap will be failed
-        tapGestureRecognizer.require(toFail: doubleTapGestureRecognizer)
+//        tapGestureRecognizer.require(toFail: doubleTapGestureRecognizer)
         
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
-        self.sceneView.addGestureRecognizer(doubleTapGestureRecognizer)
+//        self.sceneView.addGestureRecognizer(doubleTapGestureRecognizer)
         
     }
     
-    @objc func doubleTapped(recognizer: UIGestureRecognizer) {
-        
-        let sceneView = recognizer.view as! ARSCNView
-        let touch = recognizer.location(in: sceneView)
-        
-        
-        let hitResults = sceneView.hitTest(touch, options: [:])
-        
-        //if hit result is not empty that means our touch has intercepted with something
-        if !hitResults.isEmpty {
-            guard let hitResult = hitResults.first else {
-                return
-            }
-            
-            //the node which we have touched we will store it in node variable
-            let node = hitResult.node
-            
-            //once we have the node we will apply force to it
-            //as impulse means applying force for example kicking a football
-            //we are multiplying the coordinates to increase the force
-            //            node.physicsBody?.applyForce(SCNVector3(hitResult.worldCoordinates.x,hitResult.worldCoordinates.y,hitResult.worldCoordinates.z), asImpulse: true)
-            node.physicsBody?.applyForce(SCNVector3(hitResult.worldCoordinates.x * Float(2.0), 2.0 ,hitResult.worldCoordinates.z * Float(2.0)), asImpulse: true)
-        }
-    }
+//    @objc func doubleTapped(recognizer: UIGestureRecognizer) {
+//
+//        let sceneView = recognizer.view as! ARSCNView
+//        let touch = recognizer.location(in: sceneView)
+//
+//
+//        let hitResults = sceneView.hitTest(touch, options: [:])
+//
+//        //if hit result is not empty that means our touch has intercepted with something
+//        if !hitResults.isEmpty {
+//            guard let hitResult = hitResults.first else {
+//                return
+//            }
+//
+//            //the node which we have touched we will store it in node variable
+//            let node = hitResult.node
+//
+//            //once we have the node we will apply force to it
+//            //as impulse means applying force for example kicking a football
+//            //we are multiplying the coordinates to increase the force
+//            //            node.physicsBody?.applyForce(SCNVector3(hitResult.worldCoordinates.x,hitResult.worldCoordinates.y,hitResult.worldCoordinates.z), asImpulse: true)
+//            node.physicsBody?.applyForce(SCNVector3(hitResult.worldCoordinates.x * Float(2.0), 2.0 ,hitResult.worldCoordinates.z * Float(2.0)), asImpulse: true)
+//        }
+//    }
     
     @objc func tapped(recognizer: UIGestureRecognizer) {
         
@@ -103,8 +103,12 @@ class LoadingModelsViewController: UIViewController,ARSCNViewDelegate {
     
     private func addTable(hitResult: ARHitTestResult) {
         
-        let tableScene = SCNScene(named: "table.dae")
+        let tableScene = SCNScene(named: "bench.dae")
         let tableNode = tableScene?.rootNode.childNode(withName: "SketchUp", recursively: true)
+        
+        tableNode?.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y,hitResult.worldTransform.columns.3.z)
+        
+        self.sceneView.scene.rootNode.addChildNode(tableNode!)
     }
     
     override func viewWillAppear(_ animated: Bool) {

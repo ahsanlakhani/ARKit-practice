@@ -14,6 +14,10 @@
 		849AC1861F8F79D7000B6CC2 /* table.dae in Resources */ = {isa = PBXBuildFile; fileRef = 849AC1851F8F79D7000B6CC2 /* table.dae */; };
 		849AC1881F8F7AB1000B6CC2 /* FW_WD_M.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 849AC1871F8F7AB0000B6CC2 /* FW_WD_M.JPG */; };
 		849AC18A1F8F7BB8000B6CC2 /* LoadingModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849AC1891F8F7BB8000B6CC2 /* LoadingModelsViewController.swift */; };
+		849AC18E1F8F9229000B6CC2 /* tischholz2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849AC18B1F8F9229000B6CC2 /* tischholz2.jpg */; };
+		849AC18F1F8F9229000B6CC2 /* _6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849AC18C1F8F9229000B6CC2 /* _6.jpg */; };
+		849AC1901F8F9229000B6CC2 /* tischholz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849AC18D1F8F9229000B6CC2 /* tischholz.jpg */; };
+		849AC1921F8F9231000B6CC2 /* bench.dae in Resources */ = {isa = PBXBuildFile; fileRef = 849AC1911F8F9231000B6CC2 /* bench.dae */; };
 		84A835011F8BB673003A5EDC /* OverlayPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A835001F8BB673003A5EDC /* OverlayPlane.swift */; };
 		84E0943B1F8B7BFD0020F3CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0943A1F8B7BFD0020F3CE /* AppDelegate.swift */; };
 		84E0943D1F8B7BFD0020F3CE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0943C1F8B7BFD0020F3CE /* art.scnassets */; };
@@ -52,6 +56,10 @@
 		849AC1851F8F79D7000B6CC2 /* table.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = table.dae; path = ../../../../Documents/table.dae; sourceTree = "<group>"; };
 		849AC1871F8F7AB0000B6CC2 /* FW_WD_M.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FW_WD_M.JPG; path = "../../../../Downloads/Table round038.ZIP/TBR038/FW_WD_M.JPG"; sourceTree = "<group>"; };
 		849AC1891F8F7BB8000B6CC2 /* LoadingModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModelsViewController.swift; sourceTree = "<group>"; };
+		849AC18B1F8F9229000B6CC2 /* tischholz2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tischholz2.jpg; path = ../../../../Documents/bench/tischholz2.jpg; sourceTree = "<group>"; };
+		849AC18C1F8F9229000B6CC2 /* _6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = _6.jpg; path = ../../../../Documents/bench/_6.jpg; sourceTree = "<group>"; };
+		849AC18D1F8F9229000B6CC2 /* tischholz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tischholz.jpg; path = ../../../../Documents/bench/tischholz.jpg; sourceTree = "<group>"; };
+		849AC1911F8F9231000B6CC2 /* bench.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = bench.dae; path = ../../../../Documents/bench.dae; sourceTree = "<group>"; };
 		84A835001F8BB673003A5EDC /* OverlayPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlane.swift; sourceTree = "<group>"; };
 		84E094371F8B7BFD0020F3CE /* ar-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ar-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E0943A1F8B7BFD0020F3CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +127,10 @@
 		84E094391F8B7BFD0020F3CE /* ar-practice */ = {
 			isa = PBXGroup;
 			children = (
+				849AC1911F8F9231000B6CC2 /* bench.dae */,
+				849AC18C1F8F9229000B6CC2 /* _6.jpg */,
+				849AC18D1F8F9229000B6CC2 /* tischholz.jpg */,
+				849AC18B1F8F9229000B6CC2 /* tischholz2.jpg */,
 				849AC1871F8F7AB0000B6CC2 /* FW_WD_M.JPG */,
 				849AC1851F8F79D7000B6CC2 /* table.dae */,
 				8422E1661F8CC65D00941BA4 /* grid.png */,
@@ -267,11 +279,15 @@
 			files = (
 				849AC1881F8F7AB1000B6CC2 /* FW_WD_M.JPG in Resources */,
 				84E0943D1F8B7BFD0020F3CE /* art.scnassets in Resources */,
+				849AC18F1F8F9229000B6CC2 /* _6.jpg in Resources */,
 				8422E1671F8CC65D00941BA4 /* grid.png in Resources */,
 				84E094471F8B7BFD0020F3CE /* LaunchScreen.storyboard in Resources */,
 				84E094441F8B7BFD0020F3CE /* Assets.xcassets in Resources */,
 				84E094421F8B7BFD0020F3CE /* Main.storyboard in Resources */,
+				849AC1921F8F9231000B6CC2 /* bench.dae in Resources */,
 				849AC1861F8F79D7000B6CC2 /* table.dae in Resources */,
+				849AC1901F8F9229000B6CC2 /* tischholz.jpg in Resources */,
+				849AC18E1F8F9229000B6CC2 /* tischholz2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
