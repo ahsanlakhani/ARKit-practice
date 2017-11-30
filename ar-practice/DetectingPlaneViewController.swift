@@ -54,15 +54,16 @@ class DetectingPlaneViewController: UIViewController,ARSCNViewDelegate {
     //didAdd function is going to be called whenever ARKit finds any anchors or plane
     //in this function it is passing a node and also the anchor so with these two things we can create a plane
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        
+       
         if !(anchor is ARPlaneAnchor) {
             return
         }
-        
         let plane = OverlayPlane(anchor: anchor as! ARPlaneAnchor)
         //appending every new plane found to the planes array
         self.planes.append(plane)
         node.addChildNode(plane)
+        
+        
     }
     
     //didUpdate function is used to find out when arkit notifies us about the updated anchors

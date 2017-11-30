@@ -25,6 +25,8 @@ class OverlayPlane: SCNNode {
     
     func update(anchor: ARPlaneAnchor) {
         
+        
+        
         self.planeGeometry.width = CGFloat(anchor.extent.x)
         self.planeGeometry.height = CGFloat(anchor.extent.z)
         self.position = SCNVector3Make(anchor.center.x, 0, anchor.center.z)
@@ -35,10 +37,9 @@ class OverlayPlane: SCNNode {
     }
     
     private func setup() {
-        
         //creating a plane(rectangular shape)
         //plane is just another type of shape
-        self.planeGeometry = SCNPlane(width: CGFloat(self.anchor.extent.x), height: CGFloat(self.anchor.extent.z))
+        self.planeGeometry = SCNPlane(width: CGFloat(self.anchor.center.x), height: CGFloat(self.anchor.extent.z))
         
         //creating a material with image
         let material = SCNMaterial()
